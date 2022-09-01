@@ -1,0 +1,598 @@
+@font-face {
+  font-family: "gon";
+  src: url(../assets/font/THE\ GONjURING.ttf) format('opentype')
+}
+
+.Wrap {}
+
+/* :root {
+  --list_text: '';
+} */
+
+
+/* * {
+  outline: 1px solid;
+} */
+
+body {
+  background: #000;
+  color: #f7f7f7;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+h2 {
+  position: absolute;
+  top: 10%;
+  left: ((100% - 1400px) / 2);
+  font-family: "gon";
+  font-size: 40px;
+  letter-spacing: .1em;
+}
+
+.slide_control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 100px;
+  font-size: 45px;
+  z-index: 999;
+}
+
+.slide_control i {
+  display: block;
+}
+
+.page {
+  position: absolute;
+  top: 10%;
+  right: 260px;
+  font-size: 21px;
+  z-index: 999;
+}
+
+.page span~span::before {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 1px;
+  background: #666;
+  margin: 0px 25px;
+  vertical-align: middle;
+}
+
+
+.Gnb {
+  position: fixed;
+  left: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  width: 1px;
+  background: #444;
+  color: #000;
+}
+
+.Gnb ul>li {
+  margin-bottom: 100px;
+}
+
+.Gnb ul>li:last-child {
+  margin-bottom: 0;
+}
+
+.Gnb ul>li a {
+  position: relative;
+  display: block;
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(#666, #f9f9f9);
+  transform: translateX(-50%);
+  font-size: 0;
+}
+
+.Gnb ul>li:nth-child(1) a::after {
+  content: "main";
+  padding: 0;
+}
+
+.Gnb ul>li:nth-child(2) a::after {
+  content: "cast";
+  padding: 0;
+}
+
+.Gnb ul>li:nth-child(3) a::after {
+  content: "episode";
+  padding: 0;
+}
+
+.Gnb ul>li:nth-child(4) a::after {
+  content: "gallery";
+  padding: 0;
+}
+
+.Gnb ul>li:nth-child(5) a::after {
+  content: "clip";
+  padding: 0;
+}
+
+.Gnb ul>li:nth-child(6) a::after {
+  content: "footer";
+  padding: 0;
+}
+
+
+.Gnb ul>li:hover a::after {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(#666, #f9f9f9);
+  padding: 5px 15px 7px 15px;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.Gnb ul>li.on a::after {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(#666, #f9f9f9);
+  padding: 5px 15px 7px 15px;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+h1 {
+  position: fixed;
+  top: 0px;
+  left: 100px;
+  z-index: 999;
+  font-size: 0;
+  line-height: 100px;
+}
+
+h1 img {
+  width: 100px;
+}
+
+.Icons {
+  position: fixed;
+  top: 0px;
+  right: 100px;
+  font-size: 30px;
+  line-height: 100px;
+}
+
+.Top {
+  position: relative;
+}
+
+.Top .container {
+  display: flex;
+  align-items: center;
+}
+
+.Top .container>div {
+  flex: 1
+}
+
+.Top .left img {
+  width: 120%;
+  opacity: 0;
+}
+
+.Top .right {
+  text-align: center;
+}
+
+.Top .right>p {
+  font-family: "gon";
+  font-size: 40px;
+  margin-bottom: 15px;
+  letter-spacing: 0.1em;
+}
+
+.Top .right img {
+  margin-bottom: 40px;
+}
+
+.Top .desc {
+  margin-bottom: 40px;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.Top .desc ul {
+  display: flex;
+  justify-content: center;
+}
+
+.Top .desc ul li~li::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 2px;
+  background: #780e0e;
+  margin: 0 20px 5px 20px;
+}
+
+.Top .genre {
+  margin-bottom: 70px;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.Top .genre ul {
+  display: flex;
+  justify-content: center;
+}
+
+
+.Top .genre ul li {
+  padding: 5px 20px 7px 20px;
+  border-radius: 20px;
+  border: 1px solid #444;
+}
+
+.Top .genre ul li~li {
+  margin-left: 10px;
+}
+
+.Top .watch {
+  font-size: 21px;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+}
+
+.Top .watch i {
+  padding: 15px;
+  border-radius: 50%;
+  border: 1px solid #444;
+  margin-right: 10px;
+}
+
+.Top .blood>img {
+  position: absolute;
+  opacity: 0;
+}
+
+
+.Top .blood>img:nth-child(1) {
+  top: 40%;
+  left: 10%;
+  width: 400px;
+  transform: rotate(-45deg);
+}
+
+.Top.on .blood>img:nth-child(1) {
+  animation: blood 0.1s;
+  animation-delay: 1.9s;
+  animation-fill-mode: forwards;
+}
+
+.Top .blood>img:nth-child(2) {
+  top: 10%;
+  right: 45%;
+}
+
+.Top.on .blood>img:nth-child(2) {
+  animation: blood 0.1s;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+}
+
+.Top .blood>img:nth-child(3) {
+  top: 40%;
+  right: 100px;
+}
+
+.Top.on .blood>img:nth-child(3) {
+  animation: blood 0.1s;
+  animation-delay: 2.2s;
+  animation-fill-mode: forwards;
+}
+
+.Top.on .left img {
+  animation: opac 4s;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes blood {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opac {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.Cast {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.Cast .swiper {
+  position: static;
+  width: 1400px;
+  height: 800px;
+  overflow: visible;
+}
+
+.Cast .swiper-wrapper {
+  position: static;
+}
+
+.Cast .swiper-slide {
+  display: flex;
+}
+
+.Cast .swiper-slide .left {
+  flex: 0.7;
+}
+
+.Cast .swiper-slide .center {
+  flex: 1;
+}
+
+.Cast .swiper-slide .right {
+  flex: 0.7;
+}
+
+.Cast .swiper-slide .inner_left {
+  height: 350px;
+  padding: 30px;
+  border-top: 1px solid #666;
+  border-left: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+.Cast .swiper-slide .inner_right {
+  height: 350px;
+  padding: 30px;
+  border-top: 1px solid #666;
+  border-right: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+.Cast .swiper-slide .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Cast .swiper-slide .left strong {
+  display: block;
+  font-family: "gon";
+  font-size: 45px;
+  line-height: 0.8;
+  letter-spacing: .1em;
+  margin-bottom: 15px;
+}
+
+.Cast .swiper-slide .left p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.Cast .swiper-slide .center {
+  display: flex;
+  align-items: center;
+
+}
+
+.Cast .swiper-slide .center img {
+  width: 700px;
+}
+
+.Cast .swiper-slide .center p {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "gon";
+  letter-spacing: .2em;
+  font-size: 55px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.Cast .swiper-slide .center .fog {
+  position: absolute;
+  display: block;
+  top: 40%;
+  left: 0;
+  right: 0;
+  min-width: 100vw;
+  height: 500px;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.Cast .swiper-slide .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Cast .swiper-slide .right p:first-child {
+  font-family: 'Noto Sans KR';
+  font-size: 40px;
+  text-align: right;
+}
+
+.Cast .swiper-slide .right p:last-child {
+  font-family: 'Noto Sans KR';
+  font-size: 18px;
+  text-align: right;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.Episode .swiper_epi {
+  width: 1400px;
+  height: 600px;
+}
+
+.Episode .swiper-slide {
+  position: relative;
+}
+
+.Episode img {
+  height: 100%;
+}
+
+.Episode .text {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 600px;
+}
+
+.Episode .text strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.Episode .text strong span {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 300;
+  margin-left: 10px;
+  /* line-height: 20px; */
+}
+
+.Episode .text h3 {
+  font-family: "gon";
+  font-size: 55px;
+  margin-bottom: 20px;
+  letter-spacing: .1em;
+}
+
+.Episode .text .date {
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.Episode .text .summary {
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.45;
+  text-align: justify;
+  margin-bottom: 60px;
+}
+
+.Episode .watch {
+  font-size: 18x;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.Episode .watch i {
+  padding: 15px;
+  border-radius: 50%;
+  border: 1px solid #444;
+  margin-right: 10px;
+}
+
+.Gallery .swiper_3d {
+  height: 600px
+}
+
+.Gallery .swiper_3d .swiper-slide {
+  text-align: center;
+  /* font-size: 18px; */
+  background: transparent;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  box-shadow: 0px 2px 10px 0px #000;
+  overflow: hidden;
+}
+
+.Gallery .swiper_3d .swiper-slide img {
+  min-width: 100%
+}
+
+
+
+/* .Clip .flexbox {
+  display: flex;
+  gap: 10px;
+}
+
+.Clip .flexbox>div {
+  flex: 1;
+  height: 600px;
+  transition: 0.5s;
+}
+
+.Clip .flexbox div.on {
+  flex: 8;
+}
+
+.Clip .flexbox div:hover{
+  flex: 8;
+} */
+
+.Footer {
+
+  padding: 30px 0;
+}
+
+.Footer h2 {
+  position: static;
+  width: 200px;
+  font-size: 0;
+  margin: 0 auto 15px auto;
+}
+
+.Footer ul {
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+  color: #ddd;
+  font-size: 13px;
+}
+
+.Footer ul li~li::before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  background: #666;
+  margin: 0px 20px 4px 20px;
+  vertical-align: center;
+}
+
+.fp-watermark {
+  display: none;
+}
