@@ -15,9 +15,9 @@
 <body>
   <div class="Wrap">
 
-    <div class="Header">
+    <header class="Header">
       <h1>
-        <a href="">
+        <a href="/">
           <img src="img/logo_hbo.png" alt="">
         </a>
       </h1>
@@ -29,17 +29,15 @@
           <li text="episode"><a href="#episode">episode guide</a></li>
           <li text="gallery"><a href="#gallery">gallery</a></li>
           <li text="clip"><a href="#clip">clip</a></li>
-          <li text="footer"><a href="#footer">footer</a></li>
+          <li text="footer"><a href="#footer">bottom</a></li>
         </ul>
       </nav>
 
       <div class="Icons">
         <!-- <a href=""><i class="xi-search"></i></a> -->
-        <a href=""><i class="xi-bars"></i></a>
-
+        <i class="xi-bars"></i>
       </div>
-
-    </div>
+    </header>
 
     <div id="fullpage">
       <section class="section Top">
@@ -65,7 +63,7 @@
               </ul>
             </div>
             <div class="watch">
-              <a href="">
+              <a href="#!">
                 <i class="xi-play"></i>
                 <span>WATCH TRAILER</span>
               </a>
@@ -122,10 +120,11 @@
                 <div class="right">
                   <div class="inner_right">
                     <p>"</p>
-                    <p>The sweetest part of being a couple is<br />
-                      sharing your life with someone else<br />
-                      But my life, evidently, had not<br />
-                      been good enough to share
+                    <p>I have no heart-beat and have no need to <br />
+                      breathe. There are no electrical <br />
+                      impulses in my body. What <br />
+                      animates you no longer<br />
+                      animates me
                     </p>
                   </div>
                 </div>
@@ -145,10 +144,10 @@
                 <div class="right">
                   <div class="inner_right">
                     <p>"</p>
-                    <p>The sweetest part of being a couple is<br />
-                      sharing your life with someone else<br />
-                      But my life, evidently, had not<br />
-                      been good enough to share
+                    <p>The vampires here, they’re like cowboys.<br />
+                      If they don’t get Godric back they’ll<br />
+                      want justice. They’ll start<br />
+                      attacking people
                     </p>
                   </div>
                 </div>
@@ -168,10 +167,11 @@
                 <div class="right">
                   <div class="inner_right">
                     <p>"</p>
-                    <p>The sweetest part of being a couple is<br />
-                      sharing your life with someone else<br />
-                      But my life, evidently, had not<br />
-                      been good enough to share
+                    <p>
+                      I ain't been to med school or fairy school <br />
+                      or nothin', so if you can put it in terms<br />
+                      a late man could understand <br />
+                      I'd appreciate it
                     </p>
                   </div>
                 </div>
@@ -191,10 +191,10 @@
                 <div class="right">
                   <div class="inner_right">
                     <p>"</p>
-                    <p>The sweetest part of being a couple is<br />
-                      sharing your life with someone else<br />
-                      But my life, evidently, had not<br />
-                      been good enough to share
+                    <p>Who the fuck I am is an older vampire than <br />
+                      you and is the progeny of the King of<br />
+                      Louisiana who happens to be out of<br />
+                      town which makes me the Queen
                     </p>
                   </div>
                 </div>
@@ -217,8 +217,16 @@
       <section class="section Episode">
         <div class="container">
           <h2>epidsode guide</h2>
-          <strong>Season 7 <i class="xi-angle-down"></i></strong>
-          <div class="swiper_epi">
+          <select name="" id="">
+            <option value="">Season 7</option>
+            <option value="">Season 6</option>
+          </select>
+
+          <!-- <strong>Season 7 <i class="xi-angle-down"></i></strong> -->
+          <div class="swiper_epi on">
+            <div class="page">
+              <span id="current_epi"></span> <span id="total_epi"></span>
+            </div>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img src="img/ep01.jpg" alt="">
@@ -226,13 +234,16 @@
                   <strong>★★★★☆ <span>8.2 / 10</span></strong>
                   <h3>Hesus gonna be here</h3>
                   <p class="date">Episode 1 aired June 22, 2014</p>
-                  <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                    voluptatibus officia
-                    rem ea unde autem iure, sequi tempora impedit. Architecto voluptas beatae dolore
-                    saepe non odit ea,
-                    delectus provident, quo doloremque quidem ex rem consequatur aliquid ullam
-                    harum? Earum, facilis?
-                  </p>
+                  <p class="summary">
+                    A band of rogue H-vamps crashes the vampire-human mixer at Bellefleur's, with
+                    shocking results. As
+                    Sookie seeks refuge
+                    from accusations that she's somehow to blame for the chaos in Bon Temps, the
+                    "one vampire for every
+                    human" plan moves
+                    forward. In the face of a vigilante insurrection led by redneck Vince, Bill
+                    receives aid from an
+                    unexpected source. </p>
                   <div class="watch">
                     <i class="xi-play"></i>
                     <span>WATCH TRAILER</span>
@@ -241,19 +252,24 @@
               </div>
               <div class="swiper-slide">
                 <img src="img/ep02.jpg" alt="">
-
-
                 <div class="text">
                   <strong>★★★★☆ <span>8.2 / 10</span></strong>
                   <h3>I Found You</h3>
                   <p class="date">Episode 2 aired Jun 29, 2014</p>
-                  <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                    voluptatibus officia
-                    rem ea unde
-                    autem iure, sequi tempora impedit. Architecto voluptas beatae dolore saepe non
-                    odit ea, delectus
-                    provident, quo
-                    doloremque quidem ex rem consequatur aliquid ullam harum? Earum, facilis?</p>
+                  <p class="summary">
+                    A trio of hostages taken in the Bellefleur's attack looks to a familiar face as
+                    a possible liberator
+                    from the H-vamps.
+                    Sookie and Jason visit the neighboring town of Saint Alice, where a young
+                    woman's diary offers clues
+                    to the potential
+                    fate of Bon Temps. Spurned by Lafayette, a desperate Lettie Mae turns to Willa
+                    to channel her family
+                    past. Vince whips
+                    his fellow vigilantes into a dangerous frenzy. Pam's search for her maker leads
+                    her to a very
+                    familiar place.
+                  </p>
                   <div class="watch">
                     <i class="xi-play"></i>
                     <span>WATCH TRAILER</span>
@@ -266,13 +282,14 @@
                   <strong>★★★★☆ <span>8.4 / 10</span></strong>
                   <h3>Fire in the Hole</h3>
                   <p class="date">Episode 3 aired Jul 6, 2014</p>
-                  <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                    voluptatibus officia
-                    rem ea unde
-                    autem iure, sequi tempora impedit. Architecto voluptas beatae dolore saepe non
-                    odit ea, delectus
-                    provident, quo
-                    doloremque quidem ex rem consequatur aliquid ullam harum? Earum, facilis?</p>
+                  <p class="summary">
+                    Sookie hatches a dangerous plan to take down the H-Vamps; Jason eyes a family
+                    future with Violet;
+                    Willa is forced to
+                    find a new place to stay; Sarah Newlin sheds her past; Pam offers Eric a
+                    compelling reason to return
+                    to Louisiana.
+                  </p>
                   <div class="watch">
                     <i class="xi-play"></i>
                     <span>WATCH TRAILER</span>
@@ -285,13 +302,12 @@
                   <strong>★★★★★ <span>9.9 / 10</span></strong>
                   <h3>Death Is Not the End</h3>
                   <p class="date">Episode 4 aired Jul 13, 2014</p>
-                  <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                    voluptatibus officia
-                    rem ea unde
-                    autem iure, sequi tempora impedit. Architecto voluptas beatae dolore saepe non
-                    odit ea, delectus
-                    provident, quo
-                    doloremque quidem ex rem consequatur aliquid ullam harum? Earum, facilis?</p>
+                  <p class="summary">
+                    In the aftermath of yet another bloodbath, Sam, Sookie and Jason find themselves
+                    the bearers of bad
+                    news in Bon Temps.
+                    Pam recalls the events that led her and Eric to Shreveport and Fangtasia.
+                  </p>
                   <div class="watch">
                     <i class="xi-play"></i>
                     <span>WATCH TRAILER</span>
@@ -299,14 +315,123 @@
                 </div>
               </div>
             </div>
+            <div class="slide_control">
+              <i class="xi-angle-left-thin"></i>
+              <i class="xi-angle-right-thin"></i>
+            </div>
           </div>
-          <div class="slide_control">
-            <i class="xi-angle-left-thin"></i>
-            <i class="xi-angle-right-thin"></i>
+
+          <div class="swiper_epi_02">
+            <div class="page">
+              <span id="current_epi_02"></span> <span id="total_epi_02"></span>
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="img/ep05.jpg" alt="">
+                <div class="text">
+                  <strong>★★★★☆ <span>7.9 / 10</span></strong>
+                  <h3>Who Are You, Really?</h3>
+                  <p class="date">Episode 1 aired Jun 16, 2013</p>
+                  <p class="summary">
+                    In the wake of Bill's blood-soaked reincarnation, Sookie , Eric, Jason, Jessica,
+                    Tara, Pam and Nora
+                    flee the Authority
+                    compound as Sam, Luna and Emma dodge swarming guards. Now packmaster, Alcide
+                    discovers that the job
+                    comes with unsavory
+                    side dishes, but other major perks. In Bon Temps, Andy deals with parenting four
+                    newborn
+                    human-faerie hybrids.
+                    Meanwhile, Louisiana Governor Truman Burrell vows open season on vampires.
+                  </p>
+                  <div class="watch">
+                    <i class="xi-play"></i>
+                    <span>WATCH TRAILER</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/ep06.jpg" alt="">
+                <div class="text">
+                  <strong>★★★★☆ <span>8.1 / 10</span></strong>
+                  <h3>The Sun</h3>
+                  <p class="date">Episode 2 aired Jun 23, 2013</p>
+                  <p class="summary">
+                    A long-lost relative reveals himself to Jason and Sookie. After Tara is
+                    victimized by a new
+                    government weapon, Eric
+                    takes matters into his own hands in an effort to thwart Burrell's anti-vampire
+                    initiatives. On the
+                    road to work, Sookie
+                    is drawn to a handsome stranger who shares her faerie abilities. Sam is unnerved
+                    by
+                    supernatural-rights zealot Nicole,
+                    and is confronted by Alcide and Martha about Emma's future. Bill contemplates
+                    the scope of his
+                    heightened powers.
+                  </p>
+                  <div class="watch">
+                    <i class="xi-play"></i>
+                    <span>WATCH TRAILER</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/ep07.jpg" alt="">
+                <div class="text">
+                  <strong>★★★★☆ <span>8.4 / 10</span></strong>
+                  <h3>You're No Good</h3>
+                  <p class="date">Episode 3 aired Jun 30, 2013</p>
+                  <p class="summary">
+                    Irate over Burrell's blatant aggression towards vampires, Eric takes matters
+                    into his own hands.
+                    After dangerously
+                    testing the limits of his powers, Bill enlists a TruBlood innovator to
+                    synthesize a new type of
+                    blood - but has
+                    difficulty finding the right donor. Sookie begins to learn why Warlow is after
+                    her. Sam receives
+                    unexpected help from
+                    Nicole and her Vampire Unity Society (V.U.S.) associates. Steve Newlin finds his
+                    past ideals turning
+                    into a current
+                    nightmare.
+                  </p>
+                  <div class="watch">
+                    <i class="xi-play"></i>
+                    <span>WATCH TRAILER</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="img/ep08.jpg" alt="">
+                <div class="text">
+                  <strong>★★★★★ <span>9.9 / 10</span></strong>
+                  <h3>At Last</h3>
+                  <p class="date">Episode 4 aired Jul 7, 2013</p>
+                  <p class="summary">
+                    Sookie confronts her attraction to Ben by inviting him to dinner; Eric counters
+                    Burrell's brutal
+                    anti-vampire
+                    initiatives by hitting him where it hurts the most; Andy's faerie daughters keep
+                    dangerous company;
+                    Bill gives Takahashi
+                    the task of synthesizing a new kind of blood.
+                  </p>
+                  <div class="watch">
+                    <i class="xi-play"></i>
+                    <span>WATCH TRAILER</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide_control">
+              <i class="xi-angle-left-thin"></i>
+              <i class="xi-angle-right-thin"></i>
+            </div>
           </div>
-          <div class="page">
-            <span id="current_epi"></span> <span id="total_epi"></span>
-          </div>
+
+
       </section>
 
       <section class="section Gallery">
@@ -339,28 +464,46 @@
       <section class="section Clip">
         <div class="container">
           <h2>Clip</h2>
-          <iframe width="560" height="315" src="https://youtu.be/Is6rZvLrupg"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+          <div>
+            <iframe width="1040" height="585"
+              src="https://www.youtube.com/embed/3Wk3HSiX-vQ?controls=0"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+
         </div>
       </section>
 
 
       <section class="section Footer fp-auto-height">
         <h2>
-          <img src="img/logo03.png" alt="">
+          <a href="/">
+            <img src="img/logo03.png" alt="">
+          </a>
         </h2>
         <ul>
-          <li><a href="">Conditions of Use</a></li>
-          <li><a href="">Privacy Notice</a></li>
-          <li><a href="">Interest-Based Ads</a></li>
+          <li><a href="#!">Conditions of Use</a></li>
+          <li><a href="#!">Privacy Notice</a></li>
+          <li><a href="#!">Interest-Based Ads</a></li>
           <li>&copy; 1990-2022 by IMDb.com, Inc.</li>
         </ul>
       </section>
     </div>
+    <div class="cover">
+      <i class="xi-close c_btn"></i>
+      <div class="container">
+        <ul>
+          <li class="on" text="main"><a href="#main">main</a></li>
+          <li text="cast"><a href="#cast">cast and crew</a></li>
+          <li text="episode"><a href="#episode">episode guide</a></li>
+          <li text="gallery"><a href="#gallery">gallery</a></li>
+          <li text="clip"><a href="#clip">clip</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
+
 
 
   <script src="assets/js/fullpage.min.js"></script>

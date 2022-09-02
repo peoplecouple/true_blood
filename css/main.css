@@ -40,10 +40,17 @@ h2 {
   right: 100px;
   font-size: 45px;
   z-index: 999;
+  cursor: pointer;
 }
 
 .slide_control i {
   display: block;
+  color: #666;
+  transition: .5s;
+}
+
+.slide_control i:hover {
+  color: #f9f9f9;
 }
 
 .page {
@@ -128,26 +135,28 @@ h2 {
 
 .Gnb ul>li:hover a::after {
   position: absolute;
-  top: 0;
+  top: -10px;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(#666, #f9f9f9);
-  padding: 6px 15px 7px 15px;
+  padding: 6px 15px;
   border-radius: 15px;
   font-size: 14px;
   font-weight: 300;
+
 }
 
 .Gnb ul>li.on a::after {
   position: absolute;
-  top: 0;
+  top: -10px;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(#666, #f9f9f9);
-  padding: 6px 15px 7px 15px;
+  padding: 6px 15px;
   border-radius: 15px;
   font-size: 14px;
   font-weight: 300;
+  vertical-align: middle;
 }
 
 h1 {
@@ -169,6 +178,8 @@ h1 img {
   right: 100px;
   font-size: 30px;
   line-height: 100px;
+  z-index: 999;
+  cursor: pointer;
 }
 
 .Top {
@@ -191,6 +202,7 @@ h1 img {
 
 .Top .right {
   text-align: center;
+  opacity: 0;
 }
 
 .Top .right>p {
@@ -275,7 +287,7 @@ h1 img {
 
 .Top.on .blood>img:nth-child(1) {
   animation: blood 0.1s;
-  animation-delay: 1.9s;
+  animation-delay: 2.1s;
   animation-fill-mode: forwards;
 }
 
@@ -286,7 +298,7 @@ h1 img {
 
 .Top.on .blood>img:nth-child(2) {
   animation: blood 0.1s;
-  animation-delay: 1.4s;
+  animation-delay: 1.7s;
   animation-fill-mode: forwards;
 }
 
@@ -297,16 +309,22 @@ h1 img {
 
 .Top.on .blood>img:nth-child(3) {
   animation: blood 0.1s;
-  animation-delay: 2.2s;
+  animation-delay: 2.6s;
   animation-fill-mode: forwards;
 }
 
 .Top.on .left img {
   animation: opac 4s;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
 
+.Top.on .right {
+  animation: opac 4s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  /* animation-timing-function: cubic-bezier(.6, .78, .89, .41); */
+}
 
 @keyframes blood {
   to {
@@ -362,6 +380,7 @@ h1 img {
   border-top: 1px solid #666;
   border-left: 1px solid #666;
   border-bottom: 1px solid #666;
+  transition: .5s;
 }
 
 .Cast .swiper-slide .inner_right {
@@ -370,6 +389,19 @@ h1 img {
   border-top: 1px solid #666;
   border-right: 1px solid #666;
   border-bottom: 1px solid #666;
+  transition: .5s;
+}
+
+.Cast .swiper-slide:hover .inner_right {
+  border-top: 1px solid #f9f9f9;
+  border-right: 1px solid #f9f9f9;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.Cast .swiper-slide:hover .inner_left {
+  border-top: 1px solid #f9f9f9;
+  border-left: 1px solid #f9f9f9;
+  border-bottom: 1px solid #f9f9f9;
 }
 
 .Cast .swiper-slide .left {
@@ -395,7 +427,6 @@ h1 img {
 .Cast .swiper-slide .center {
   display: flex;
   align-items: center;
-
 }
 
 .Cast .swiper-slide .center img {
@@ -404,7 +435,7 @@ h1 img {
 
 .Cast .swiper-slide .center p {
   position: absolute;
-  bottom: 15%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   font-family: "gon";
@@ -412,6 +443,7 @@ h1 img {
   font-size: 55px;
   font-weight: 300;
   text-align: center;
+  transition: .3s;
 }
 
 .Cast .swiper-slide .center .fog {
@@ -446,9 +478,54 @@ h1 img {
   line-height: 1.3;
 }
 
+.Episode.on .swiper_epi .swiper-wrapper div:nth-child(1) .text {
+  opacity: 1;
+  right: 0;
+}
+
+
+.Episode select {
+  position: absolute;
+  top: 105px;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f7f7f7;
+  font-size: 21px;
+  padding-right: 6px;
+}
+
+/* 체크하기 */
+.Episode option {
+  background: black;
+  border: none;
+  outline: none;
+  color: #f7f7f7;
+  text-align: center;
+  font-size: 17px;
+}
+
+
 .Episode .swiper_epi {
+  display: none;
   width: 1400px;
   height: 600px;
+}
+
+.Episode .swiper_epi.on {
+  display: block;
+}
+
+.Episode .swiper_epi_02 {
+  display: none;
+  width: 1400px;
+  height: 600px;
+}
+
+.Episode .swiper_epi_02.on {
+  display: block;
 }
 
 .Episode .swiper-slide {
@@ -459,18 +536,26 @@ h1 img {
   height: 100%;
 }
 
-.Episode .text {
+.Episode .swiper-slide .text {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -150px;
   transform: translateY(-50%);
   width: 600px;
+  opacity: 0;
+  transition: .5s;
+}
+
+.Episode.on .swiper-slide.swiper-slide-active .text {
+  opacity: 1;
+  right: 0;
 }
 
 .Episode .text strong {
   display: block;
   font-size: 18px;
   margin-bottom: 15px;
+  color: #780e0e;
 }
 
 .Episode .text strong span {
@@ -478,6 +563,7 @@ h1 img {
   font-size: 13px;
   font-weight: 300;
   margin-left: 10px;
+  color: #f7f7f7;
   /* line-height: 20px; */
 }
 
@@ -500,6 +586,7 @@ h1 img {
   line-height: 1.45;
   text-align: justify;
   margin-bottom: 60px;
+  min-height: 250px;
 }
 
 .Episode .watch {
@@ -545,28 +632,35 @@ h1 img {
 }
 
 
-
-/* .Clip .flexbox {
-  display: flex;
-  gap: 10px;
+.Clip {
+  background: url(../img/fog03.png) no-repeat center bottom/cover;
 }
 
-.Clip .flexbox>div {
-  flex: 1;
-  height: 600px;
-  transition: 0.5s;
+.Clip.on {
+  animation: zoom 15s linear infinite;
 }
 
-.Clip .flexbox div.on {
-  flex: 8;
+@keyframes zoom {
+  0% {
+    background-size: 100% auto;
+  }
+
+  50% {
+    background-size: 120% auto;
+  }
+
+  100% {
+    background-size: 100% auto;
+  }
 }
 
-.Clip .flexbox div:hover{
-  flex: 8;
-} */
+.Clip .container>div {
+  text-align: center;
+}
+
+/* *{outline: 1px solid pink;} */
 
 .Footer {
-
   padding: 30px 0;
 }
 
@@ -598,3 +692,103 @@ h1 img {
 .fp-watermark {
   display: none;
 }
+
+
+/* .first_ani {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/bg06.jpg);
+  z-index: 9999;
+  font-size: 0;
+  animation: fade_out 3.5s 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade_out {
+  to {
+    opacity: 0;
+    display: none;
+  }
+} */
+
+
+.cover {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background: url(../img/bg06.jpg);
+}
+
+.cover.on {
+  display: block;
+}
+
+.cover .c_btn {
+  position: absolute;
+  right: 100px;
+  top: 0;
+  line-height: 100px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.cover ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "gon";
+  font-size: 45px;
+  letter-spacing: .15em;
+}
+
+.cover ul li {
+  position: relative;
+}
+
+.cover ul li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f7f7f7;
+}
+
+.cover ul li {
+  margin-bottom: 20px;
+}
+
+.cover ul li a {
+  display: block;
+}
+
+.cover ul li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: transparent;
+  transition: .5s;
+}
+
+.cover ul li:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #f7f7f7;
+}
+
+/* *{outline: 1px solid pink;} */

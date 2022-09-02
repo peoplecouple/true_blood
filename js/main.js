@@ -19,6 +19,15 @@ window.addEventListener('DOMContentLoaded', () => {
       destination.index == 0
         ? document.querySelector('.Top').classList.add('on')
         : document.querySelector('.Top').classList.remove('on')
+
+      destination.index == 2
+        ? document.querySelector('.Episode').classList.add('on')
+        : document.querySelector('.Episode').classList.remove('on')
+
+
+      destination.index >= 4
+        ? document.querySelector('.Clip').classList.add('on')
+        : document.querySelector('.Clip').classList.remove('on')
     }
   })
 
@@ -61,6 +70,22 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  let swiper_epi_02 = new Swiper('.swiper_epi_02', {
+    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+
+    on: {
+      slideChangeTransitionEnd: function () {
+        const idx = this.realIndex + 1;
+        document.getElementById("current_epi_02").innerHTML = idx;
+        const total = this.slides.length - 2;
+        document.getElementById("total_epi_02").innerHTML = total;
+      }
+    }
+  });
 
   let swiper_3d = new Swiper('.swiper_3d', {
     loop: true,
@@ -75,7 +100,7 @@ window.addEventListener('DOMContentLoaded', () => {
     },
 
     on: {
-      slideChange: function () {
+      slideChangeTransitionEnd: function () {
         const idx = this.realIndex + 1;
         document.getElementById("current_g").innerHTML = idx;
         const total = this.slides.length - 6;
@@ -95,13 +120,22 @@ window.addEventListener('DOMContentLoaded', () => {
     swiper.slideNext();
   })
 
-  const epi_left = document.querySelector('.Episode .slide_control i:nth-child(1)');
+  const epi_left = document.querySelector('.Episode .swiper_epi .slide_control i:nth-child(1)');
   epi_left.addEventListener('click', function () {
     swiper_epi.slidePrev();
   })
-  const epi_right = document.querySelector('.Episode .slide_control i:nth-child(2)');
+  const epi_right = document.querySelector('.Episode .swiper_epi .slide_control i:nth-child(2)');
   epi_right.addEventListener('click', function () {
     swiper_epi.slideNext();
+  })
+
+  const epi_left_02 = document.querySelector('.Episode .swiper_epi_02 .slide_control i:nth-child(1)');
+  epi_left_02.addEventListener('click', function () {
+    swiper_epi_02.slidePrev();
+  })
+  const epi_right_02 = document.querySelector('.Episode .swiper_epi_02 .slide_control i:nth-child(2)');
+  epi_right_02.addEventListener('click', function () {
+    swiper_epi_02.slideNext();
   })
 
   const g_left = document.querySelector('.Gallery .slide_control i:nth-child(1)');
@@ -124,5 +158,30 @@ window.addEventListener('DOMContentLoaded', () => {
   //   })
   // })
   // addEventListener callback함수의 파람은 event!
+
+  document.querySelector('.Icons').addEventListener('click', function () {
+    document.querySelector('.cover').classList.add('on')
+  })
+
+  document.querySelector('.cover .c_btn').addEventListener('click', function () {
+    document.querySelector('.cover').classList.remove('on')
+  })
+
+
+
+  const cover_li = document.querySelectorAll('.cover ul li');
+  cover_li.forEach(el => {
+    el.addEventListener('click', function () {
+      document.querySelector('.cover').classList.remove('on')
+    })
+  })
+
+  const SELECT = document.querySelector('.Episode select');
+  const epi_slides = document.querySelectorAll('.Episode .container>div')
+  const OPTIONS = SELECT.options
+  SELECT.addEventListener('change', function () {
+    epi_slides.forEach(el => el.classList.remove('on'))
+    epi_slides[OPTIONS.selectedIndex].classList.add('on')
+  })
 })
 
