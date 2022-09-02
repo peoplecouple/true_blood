@@ -20,6 +20,10 @@ window.addEventListener('DOMContentLoaded', () => {
         ? document.querySelector('.Top').classList.add('on')
         : document.querySelector('.Top').classList.remove('on')
 
+      destination.index == 1
+        ? document.querySelector('.Cast').classList.add('on')
+        : document.querySelector('.Cast').classList.remove('on')
+
       destination.index == 2
         ? document.querySelector('.Episode').classList.add('on')
         : document.querySelector('.Episode').classList.remove('on')
@@ -37,11 +41,6 @@ window.addEventListener('DOMContentLoaded', () => {
     fadeEffect: {
       crossFade: true
     },
-    // Navigation arrows
-    // navigation: {
-    //   nextEl: '.Top .slide_control i:nth-child(2)',
-    //   prevEl: '.Top .slide_control i:nth-child(1)',
-    // },
 
     on: {
       slideChange: function () {
@@ -59,7 +58,6 @@ window.addEventListener('DOMContentLoaded', () => {
     fadeEffect: {
       crossFade: true
     },
-
     on: {
       slideChange: function () {
         const idx = this.realIndex + 1;
@@ -76,9 +74,8 @@ window.addEventListener('DOMContentLoaded', () => {
     fadeEffect: {
       crossFade: true
     },
-
     on: {
-      slideChangeTransitionEnd: function () {
+      slideChange: function () {
         const idx = this.realIndex + 1;
         document.getElementById("current_epi_02").innerHTML = idx;
         const total = this.slides.length - 2;
@@ -98,7 +95,6 @@ window.addEventListener('DOMContentLoaded', () => {
       slideShadows: true,
       stretch: 50
     },
-
     on: {
       slideChangeTransitionEnd: function () {
         const idx = this.realIndex + 1;
@@ -168,7 +164,6 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 
 
-
   const cover_li = document.querySelectorAll('.cover ul li');
   cover_li.forEach(el => {
     el.addEventListener('click', function () {
@@ -176,12 +171,18 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   })
 
+  //select tab
   const SELECT = document.querySelector('.Episode select');
   const epi_slides = document.querySelectorAll('.Episode .container>div')
   const OPTIONS = SELECT.options
   SELECT.addEventListener('change', function () {
-    epi_slides.forEach(el => el.classList.remove('on'))
-    epi_slides[OPTIONS.selectedIndex].classList.add('on')
+    epi_slides.forEach(el => el.classList.remove('on'));
+    epi_slides[OPTIONS.selectedIndex].classList.add('on');
   })
+
+  console.log(OPTIONS.selectedIndex)
+  // OPTIONS.addEventListener('click', function () {
+  //   swiper_epi_02
+  // })
 })
 

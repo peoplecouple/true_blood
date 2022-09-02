@@ -53,9 +53,10 @@ h2 {
   color: #f9f9f9;
 }
 
+/* *{outline: 1px solid pink;} */
 .page {
   position: absolute;
-  top: 10%;
+  top: 12%;
   right: 260px;
   font-size: 21px;
   z-index: 999;
@@ -97,7 +98,7 @@ h2 {
   display: block;
   padding: 5px;
   border-radius: 50%;
-  background: linear-gradient(#666, #f9f9f9);
+  background: linear-gradient(#444, #f9f9f9);
   transform: translateX(-50%);
   font-size: 0;
 }
@@ -128,7 +129,7 @@ h2 {
 }
 
 .Gnb ul>li:nth-child(6) a::after {
-  content: "footer";
+  content: "bottom";
   padding: 0;
 }
 
@@ -138,11 +139,11 @@ h2 {
   top: -10px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(#666, #f9f9f9);
+  background: linear-gradient(#444, #f9f9f9);
   padding: 6px 15px;
   border-radius: 15px;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
 
 }
 
@@ -151,11 +152,11 @@ h2 {
   top: -10px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(#666, #f9f9f9);
+  background: linear-gradient(#444, #f9f9f9);
   padding: 6px 15px;
   border-radius: 15px;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   vertical-align: middle;
 }
 
@@ -270,6 +271,7 @@ h1 img {
   font-size: 25px;
   border: 1px solid #444;
   margin-right: 10px;
+  color: #780e0e;
 }
 
 .Top .blood>img {
@@ -287,7 +289,7 @@ h1 img {
 
 .Top.on .blood>img:nth-child(1) {
   animation: blood 0.1s;
-  animation-delay: 2.1s;
+  animation-delay: 2.3s;
   animation-fill-mode: forwards;
 }
 
@@ -298,7 +300,7 @@ h1 img {
 
 .Top.on .blood>img:nth-child(2) {
   animation: blood 0.1s;
-  animation-delay: 1.7s;
+  animation-delay: 1.9s;
   animation-fill-mode: forwards;
 }
 
@@ -309,7 +311,7 @@ h1 img {
 
 .Top.on .blood>img:nth-child(3) {
   animation: blood 0.1s;
-  animation-delay: 2.6s;
+  animation-delay: 2.8s;
   animation-fill-mode: forwards;
 }
 
@@ -458,6 +460,28 @@ h1 img {
   margin-right: calc(-50vw + 50%);
 }
 
+
+.Cast.on .swiper-slide .center .fog {
+  animation: zoom_cast 15s linear infinite;
+}
+
+@keyframes zoom_cast {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
 .Cast .swiper-slide .right {
   display: flex;
   flex-direction: column;
@@ -486,7 +510,7 @@ h1 img {
 
 .Episode select {
   position: absolute;
-  top: 105px;
+  top: 110px;
   left: 35%;
   transform: translate(-50%, -50%);
   background: transparent;
@@ -600,6 +624,8 @@ h1 img {
   border-radius: 50%;
   border: 1px solid #444;
   margin-right: 10px;
+  color: #780e0e;
+  font-size: 21px;
 }
 
 .Gallery .swiper_3d {
